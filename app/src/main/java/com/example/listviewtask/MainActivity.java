@@ -15,15 +15,22 @@ public class MainActivity extends AppCompatActivity {
     private ArrayAdapter<String> mAdapter;
 
     private ListView mListView;
-    private Button mButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mListView = (ListView) findViewById(R.id.a_main_list_1);
+
+        mArrayList = new ArrayList<>();
+        mAdapter = new ArrayAdapter<String>(this, R.layout.item_list, mArrayList);
+
+        mListView.setAdapter(mAdapter);
     }
 
     public void doMagic(View view) {
-
+        mArrayList.add("wadwa");
+        mAdapter.notifyDataSetChanged();
     }
 }
