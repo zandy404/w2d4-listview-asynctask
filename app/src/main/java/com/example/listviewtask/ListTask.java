@@ -33,6 +33,8 @@ public class ListTask extends AsyncTask<Void, Void, ArrayList<String>> {
     protected void onPostExecute(ArrayList<String> arrayList) {
         super.onPostExecute(arrayList);
 
-        mMainActivity.updateListView(arrayList);
+        if (mMainActivity != null){
+            mMainActivity.updateListView(arrayList);
+        }
     }
 }
