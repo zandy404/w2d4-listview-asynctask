@@ -30,7 +30,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void doMagic(View view) {
-        mArrayList.add("wadwa");
+        new ListTask(this).execute();
+    }
+
+    public void updateListView(ArrayList<String> arrayList){
+        mArrayList.addAll(arrayList);
         mAdapter.notifyDataSetChanged();
     }
 }
