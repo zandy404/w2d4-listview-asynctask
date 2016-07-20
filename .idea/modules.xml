@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ListViewTask.iml" filepath="$PROJECT_DIR$/ListViewTask.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/w2d4-listview-asynctask.iml" filepath="$PROJECT_DIR$/w2d4-listview-asynctask.iml" />
     </modules>
   </component>
 </project>

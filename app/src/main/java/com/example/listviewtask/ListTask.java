@@ -1,6 +1,7 @@
 package com.example.listviewtask;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -9,14 +10,17 @@ import java.util.ArrayList;
  */
 public class ListTask extends AsyncTask<Void, Void, ArrayList<String>> {
 
+    private static final String TAG = "ListTask --->";
     private MainActivity mMainActivity;
 
     ListTask(MainActivity mainActivity){
-     mMainActivity = mainActivity;
+
+        mMainActivity = mainActivity;
     }
 
     @Override
     protected ArrayList<String> doInBackground(Void... params) {
+        Log.d(TAG, "doInBackground: Start");
         ArrayList<String> arrayList = new ArrayList<>();
 
         arrayList.add("Hello World");
@@ -26,13 +30,14 @@ public class ListTask extends AsyncTask<Void, Void, ArrayList<String>> {
         arrayList.add("Mike rocks more");
         arrayList.add("Etienne rocks even more");
 
+        Log.d(TAG, "doInBackground: End");
         return arrayList;
     }
 
     @Override
     protected void onPostExecute(ArrayList<String> arrayList) {
         super.onPostExecute(arrayList);
-
+        Log.d(TAG, "onPostExecute: ");
         if (mMainActivity != null){
             mMainActivity.updateListView(arrayList);
         }
